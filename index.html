@@ -5,29 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>REST</title>
 </head>
 
 <body>
-    <div class="container-fluid">
+
+    <header>
+        <h1>REST</h1>
+        <p>get after it.</p>
+    </header>
+
+    <div class="container-fluid pt-5">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline">Exercise Tracker</span>
                     </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
                         <li>
                             <!-- BMI Dropdown -->
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">BMI</span> </a>
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">BMI</span>
+                            </a>
                             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
 
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+                                    <a href="#" class="nav-link px-0"> <span
+                                            class="d-none d-sm-inline">Calculator</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Saved
+                                            Data</span>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -35,13 +54,16 @@
                         <!-- Exercises -->
                         <li>
                             <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Exercises</span></a>
+                                <i class="fs-4 bi-bootstrap"></i> <span
+                                    class="ms-1 d-none d-sm-inline">Exercises</span></a>
                             <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
+                                        1</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
+                                        2</a>
                                 </li>
                             </ul>
                         </li>
@@ -49,28 +71,57 @@
                         <li>
                             <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Schedule</span> </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Workout</span></a>
+                                    <a href="#" class="nav-link px-0"> <span
+                                            class="d-none d-sm-inline">Workout</span></a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span>
+                                        2</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span>
+                                        3</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span>
+                                        4</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                     <hr>
-                
+
                 </div>
             </div>
-            <div class="col py-3">
-                This is where the dropdown menu links can bring you? I don't know.
+            <div class="row text-center">
+
+                <div class="col" id="exercise-data-form">
+                    <h2>Enter Your Data Here:</h2>
+                    <form action="">
+                        <label for="">Day: </label>
+                        <input type="text" placeholder="Monday"><br>
+                        <label for="">Exercise: </label>
+                        <input type="text" placeholder="Bench Press"><br>
+                        <label for="">Weight: </label>
+                        <input type="text" placeholder="250lbs"><br>
+                        <label for="">Sets: </label>
+                        <input type="number" placeholder="3"><br>
+                        <label for="">Reps: </label>
+                        <input type="number" placeholder="12"><br>
+                        <button>Enter</button>
+                    </form>
+                </div>
+
+                <div class="col" id="bmi-calculator">
+                    <label for="">
+                        <h2>BMI Calculator</h2>
+                    </label><br>
+                    <input type="text" placeholder="Enter BMI Here"><br>
+                    <button>GO</button>
+                </div>
+
             </div>
         </div>
     </div>
