@@ -31,6 +31,68 @@ input {
     margin-bottom: 10px;
 }
 
+.exercise-inputs {
+    border-radius: 15px;
+    width: 300px;
+    background-color: white;
+    color: maroon;
+    border: black solid 1px;
+    height: 50px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.exercise-inputs:focus {
+    height: 40px;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+    background-color: aquamarine;
+}
+
+#exercise-form-button {
+    width: 100px;
+    margin-top: 20px;
+}
+
+#exercise-form-button:hover {
+    font-size: 19px;
+    transition: all .4s ease-in-out;
+    background-color: aquamarine;
+}
+
+#bmi-input {
+    border-radius: 15px;
+    width: 300px;
+    background-color: white;
+    color: black;
+    border: black solid 1px;
+    height: 50px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+#bmi-input:focus {
+    height: 40px;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+    background-color: aquamarine;
+}
+
+#bmi-button {
+    width: 100px;
+    margin-top: 20px;
+}
+
+#bmi-button:hover {
+    font-size: 19px;
+    transition: all .4s ease-in-out;
+    background-color: aquamarine;
+}
+
 ::selection {
     background-color: white;
     color: black;
