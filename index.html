@@ -61,29 +61,29 @@
             </div>
             <div>
 
-                <div id="exercise-data-form">
-                    <h2>Enter Your Data Here:</h2>
-                    <form action="">
-                        <label for="">Day: </label>
-                        <input type="text" placeholder="Monday"><br>
-                        <label for="">Exercise: </label>
-                        <input type="text" placeholder="Bench Press"><br>
-                        <label for="">Weight: </label>
-                        <input type="text" placeholder="250lbs"><br>
-                        <label for="">Sets: </label>
-                        <input type="number" placeholder="3"><br>
-                        <label for="">Reps: </label>
-                        <input type="number" placeholder="12"><br>
-                        <button>Enter</button>
-                    </form>
-                </div>
-
                 <div id="bmi-calc">
                     <label for="">
                         <h2>BMI Calculator</h2>
                     </label><br>
-                    <input type="text" placeholder="Enter BMI Here"><br>
-                    <button>GO</button>
+                    <input type="text" placeholder="Enter BMI Here" id="bmi-input"><br>
+                    <button id="bmi-button">GO</button>
+                </div>
+
+                <div id="exercise-data-form">
+                    <h2>Enter Your Data Here:</h2>
+                    <form action="">
+                        <label for="">Day: </label>
+                        <input type="text" placeholder="Monday" class="exercise-inputs"><br>
+                        <label for="">Exercise: </label>
+                        <input type="text" placeholder="Bench Press" class="exercise-inputs"><br>
+                        <label for="">Weight: </label>
+                        <input type="text" placeholder="250lbs" class="exercise-inputs"><br>
+                        <label for="">Sets: </label>
+                        <input type="number" placeholder="3" class="exercise-inputs"><br>
+                        <label for="">Reps: </label>
+                        <input type="number" placeholder="12" class="exercise-inputs"><br>
+                        <button id="exercise-form-button">Enter</button>
+                    </form>
                 </div>
 
                 <div id="workout-calendar" id="cal-wrap">

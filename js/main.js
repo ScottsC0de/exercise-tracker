@@ -5,6 +5,7 @@ var exerciseLink = $("#exercise-link");
 var bmiLink = $("#bmi-link");
 var scheduleLink = $("#schedule-link");
 
+// onload
 $(function () {
     exerciseData.css('display', 'none');
     bmiCalc.css('display', 'none');
