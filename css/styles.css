@@ -19,3 +19,12 @@ header {
 h1 {
     font-size: 100px;
 }
+
+input {
+    margin-bottom: 10px;
+}
+
+::selection {
+    background-color: white;
+    color: black;
+}
