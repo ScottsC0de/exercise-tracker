@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   <script src="./js/calendar.js"></script>
     <title>REST</title>
@@ -37,7 +38,8 @@
                         <li>
                             <!-- BMI Dropdown -->
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">BMI</span>
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"
+                                    id="bmi-link">BMI</span>
                             </a>
                             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
@@ -57,8 +59,8 @@
                         <!-- Exercises -->
                         <li>
                             <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Exercises</span></a>
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline"
+                                    id="exercise-link">Exercises</span></a>
                             <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                                 <li class="w-100">
                                     <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
@@ -98,9 +100,9 @@
 
                 </div>
             </div>
-            <div class="row text-center">
+            <div>
 
-                <div class="col" id="exercise-data-form">
+                <div id="exercise-data-form">
                     <h2>Enter Your Data Here:</h2>
                     <form action="">
                         <label for="">Day: </label>
@@ -117,7 +119,7 @@
                     </form>
                 </div>
 
-                <div class="col" id="bmi-calculator">
+                <div id="bmi-calc">
                     <label for="">
                         <h2>BMI Calculator</h2>
                     </label><br>
@@ -151,7 +153,10 @@
       </div>
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
