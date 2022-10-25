@@ -1,21 +1,32 @@
 var exerciseData = $("#exercise-data-form");
-var bmiCalc = $("#bmi-calc")
-var exerciseLink = $("#exercise-link")
+var bmiCalc = $("#bmi-calc");
+var workoutCalendar = $("#workout-calendar");
+var exerciseLink = $("#exercise-link");
 var bmiLink = $("#bmi-link");
+var scheduleLink = $("#schedule-link");
 
 $(function () {
     exerciseData.css('display', 'none');
     bmiCalc.css('display', 'none');
+    workoutCalendar.css('display', 'none');
 })
 
 bmiLink.on("click", function () {
     bmiCalc.css('display', 'block');
     exerciseData.css('display', 'none');
+    workoutCalendar.css('display', 'none');
 })
 
 exerciseLink.on("click", function () {
     exerciseData.css('display', 'block');
     bmiCalc.css('display', 'none');
+    workoutCalendar.css('display', 'none');
+})
+
+scheduleLink.on("click", function () {
+    workoutCalendar.css('display', 'block');
+    bmiCalc.css('display', 'none');
+    exerciseData.css('display', 'none');
 })
 
 
