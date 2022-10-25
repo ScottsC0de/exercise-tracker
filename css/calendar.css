@@ -1,12 +1,22 @@
 /* (A) ENTIRE PAGE */
-#cal-wrap * { font-family: arial, sans-serif; }
-.ninja { display: none !important; }
+#cal-wrap * { 
+  font-family: arial, sans-serif; 
+}
+
+.ninja { 
+  display: none !important; 
+}
 
 /* (B) CONTAINER */
-#cal-wrap { max-width: 600px; }
+#cal-wrap { 
+  max-width: 600px; 
+}
 
 /* (C) PERIOD SELECTOR */
-#cal-date { display: flex; }
+#cal-date { 
+  display: flex; 
+}
+
 #cal-mth, #cal-yr {
   box-sizing: border-box;
   padding: 10px 20px;
