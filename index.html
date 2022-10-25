@@ -27,13 +27,14 @@
 
     <div class="container-fluid pt-5">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                     <h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Exercise Tracker</span>
+                        <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Exercise Tracker</span>
                     </h2>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
+
                         <li>
                             <!-- BMI Dropdown -->
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div>
-
+<!--------------------------------------------------------------------------->
                 <div id="exercise-data-form">
                     <h2>Enter Your Data Here:</h2>
                     <form action="">
@@ -77,7 +78,7 @@
                         <button>Enter</button>
                     </form>
                 </div>
-
+<!--------------------------------------------------------------------------->
                 <div id="bmi-calc">
                     <label for="">
                         <h2>BMI Calculator</h2>
@@ -85,7 +86,7 @@
                     <input type="text" placeholder="Enter BMI Here"><br>
                     <button>GO</button>
                 </div>
-
+<!--------------------------------------------------------------------------->
                 <div id="workout-calendar" id="cal-wrap">
                     <!-- (A) PERIOD SELECTOR -->
                     <div id="cal-date">
