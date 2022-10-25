@@ -1,3 +1,24 @@
+var exerciseData = $("#exercise-data-form");
+var bmiCalc = $("#bmi-calc")
+var exerciseLink = $("#exercise-link")
+var bmiLink = $("#bmi-link");
+
+$(function () {
+    exerciseData.css('display', 'none');
+    bmiCalc.css('display', 'none');
+})
+
+bmiLink.on("click", function () {
+    bmiCalc.css('display', 'block');
+    exerciseData.css('display', 'none');
+})
+
+exerciseLink.on("click", function () {
+    exerciseData.css('display', 'block');
+    bmiCalc.css('display', 'none');
+})
+
+
 // BMI API
 // const data = null;
 
