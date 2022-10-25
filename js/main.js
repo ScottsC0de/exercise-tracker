@@ -1,3 +1,15 @@
+//API Fetch Options
+const bmiOptions = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
+		'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
+	}
+};
+
+//API Fetch Links
+
+//Page Elements
 var exerciseData = $("#exercise-data-form");
 var bmiCalc = $("#bmi-calc");
 var workoutCalendar = $("#workout-calendar");
@@ -10,44 +22,37 @@ $(function () {
     exerciseData.css('display', 'none');
     bmiCalc.css('display', 'none');
     workoutCalendar.css('display', 'none');
-})
+});
 
 bmiLink.on("click", function () {
     bmiCalc.css('display', 'block');
     exerciseData.css('display', 'none');
     workoutCalendar.css('display', 'none');
-})
+});
 
 exerciseLink.on("click", function () {
     exerciseData.css('display', 'block');
     bmiCalc.css('display', 'none');
     workoutCalendar.css('display', 'none');
-})
+});
 
 scheduleLink.on("click", function () {
     workoutCalendar.css('display', 'block');
     bmiCalc.css('display', 'none');
     exerciseData.css('display', 'none');
-})
-
-
+});
 // BMI API
-// const data = null;
-
-// const xhr = new XMLHttpRequest();
-// xhr.withCredentials = true;
-
-// xhr.addEventListener("readystatechange", function () {
-// 	if (this.readyState === this.DONE) {
-// 		console.log(this.responseText);
-// 	}
-// });
-
-// xhr.open("GET", "https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=150&height=1.83");
-// xhr.setRequestHeader("X-RapidAPI-Key", "SIGN-UP-FOR-KEY");
-// xhr.setRequestHeader("X-RapidAPI-Host", "body-mass-index-bmi-calculator.p.rapidapi.com");
-
-// xhr.send(data);
+/*
+GetBmiApi();
+function GetBmiApi(){   
+    fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=150&height=68', bmiOptions)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data);
+        })
+}*/
 
 
 // Rest API ------------------------------------------

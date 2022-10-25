@@ -4,6 +4,9 @@
 }
 
 body {
+    max-width: 75%;
+    padding: 0;
+    margin: 0;
     background-color: black;
     color: aliceblue;
 }
@@ -18,6 +21,10 @@ header {
 
 h1 {
     font-size: 100px;
+}
+
+.col-auto {
+    width: 25%;
 }
 
 input {
@@ -90,3 +97,29 @@ input {
     background-color: white;
     color: black;
 }
+
+/* Added Sidebar styling 10/25/2022 */
+#sidebar li {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+#sidebar a {
+    color: white;
+    text-align: center;
+}
+
+#sidebar a:hover {
+    background-color: aqua;
+    color: black;
+    padding: 1rem;
+    width: 140%;
+    text-align: center;
+}
+
+#sidebar-header {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/*-----------------------------------------------------------*/
