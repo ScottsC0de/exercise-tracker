@@ -69,7 +69,7 @@ input {
     background-color: var(--aquamarine);
 }
 
-#bmi-input {
+.bmi-input {
     border-radius: 15px;
     width: 300px;
     background-color: white;
@@ -82,7 +82,7 @@ input {
     padding: 0 10px;
 }
 
-#bmi-input:focus {
+.bmi-input:focus {
     height: 40px;
     font-size: 16px;
     transition: all .4s ease-in-out;
