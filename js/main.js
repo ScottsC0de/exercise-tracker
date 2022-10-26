@@ -20,6 +20,7 @@ var scheduleLink = $("#schedule-link");
 var homeScreenText = $("#home-screen-text");
 var handEmoji = $("#pointer");
 var bmiSubmit = $("#bmi-button");
+var bmiTotalElement = $('#bmi-total');
 
 // onload
 $(function () {
@@ -100,6 +101,7 @@ function GetBmiApi(bmiHeight, bmiWeight){
         })
         .then(function(data){
             console.log(data);
+            bmiTotalElement.text(Math.round(data.bmi));
         })
 }
 
