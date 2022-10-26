@@ -9,7 +9,7 @@
 }
 
 body {
-    max-width: 75%;
+    width: 100%;
     padding: 0;
     margin: 0;
     background-color: black;
@@ -26,10 +26,6 @@ header {
 
 h1 {
     font-size: 100px;
-}
-
-.col-auto {
-    width: 25%;
 }
 
 input {
@@ -128,6 +124,7 @@ input {
     text-align: center;
 }
 
+
 #home-screen-text {
     margin-top: 20px;
     font-size: 30px;
@@ -138,4 +135,14 @@ input {
     float: left;
 }
 
-/*-----------------------------------------------------------*/
+
+
+hr {
+    margin-top: 3rem;
+}
+
+    /* Form Containers */
+#forum-container {
+    width: 75%;
+    max-height: 100%;
+}
