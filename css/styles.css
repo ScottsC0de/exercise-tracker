@@ -28,6 +28,12 @@ h1 {
     font-size: 100px;
 }
 
+
+.sidebar {
+    width: 25%;
+}
+
+
 input {
     margin-bottom: 10px;
 }
@@ -124,6 +130,15 @@ input {
     text-align: center;
 }
 
+/*-----------------------------------------------------------*/
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    width: 100%;
+}
+
+
 
 #home-screen-text {
     margin-top: 20px;
@@ -146,3 +161,4 @@ hr {
     width: 75%;
     max-height: 100%;
 }
+
