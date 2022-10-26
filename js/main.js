@@ -1,10 +1,10 @@
 //API Fetch Options
 const bmiOptions = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
-		'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
-	}
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
+        'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
+    }
 };
 
 //API Fetch Links
@@ -16,6 +16,8 @@ var workoutCalendar = $("#workout-calendar");
 var exerciseLink = $("#exercise-link");
 var bmiLink = $("#bmi-link");
 var scheduleLink = $("#schedule-link");
+var homeScreenText = $("#home-screen-text");
+var handEmoji = $("#pointer");
 
 // onload
 $(function () {
@@ -28,23 +30,29 @@ bmiLink.on("click", function () {
     bmiCalc.css('display', 'block');
     exerciseData.css('display', 'none');
     workoutCalendar.css('display', 'none');
+    homeScreenText.css('display', 'none');
+    handEmoji.css('display', 'none');
 });
 
 exerciseLink.on("click", function () {
     exerciseData.css('display', 'block');
     bmiCalc.css('display', 'none');
     workoutCalendar.css('display', 'none');
+    homeScreenText.css('display', 'none');
+    handEmoji.css('display', 'none');
 });
 
 scheduleLink.on("click", function () {
     workoutCalendar.css('display', 'block');
     bmiCalc.css('display', 'none');
     exerciseData.css('display', 'none');
+    homeScreenText.css('display', 'none');
+    handEmoji.css('display', 'none');
 });
 // BMI API
 /*
 GetBmiApi();
-function GetBmiApi(){   
+function GetBmiApi(){
     fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=150&height=68', bmiOptions)
         .then(function(response){
             return response.json();
