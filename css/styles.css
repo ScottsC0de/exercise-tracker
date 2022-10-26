@@ -23,7 +23,7 @@ h1 {
     font-size: 100px;
 }
 
-.col-auto {
+.sidebar {
     width: 25%;
 }
 
@@ -123,3 +123,9 @@ input {
     text-align: center;
 }
 /*-----------------------------------------------------------*/
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    width: 100%;
+}
