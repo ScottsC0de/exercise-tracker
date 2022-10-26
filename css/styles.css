@@ -1,3 +1,8 @@
+:root {
+    --aqua: aqua;
+    --aquamarine: aquamarine;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'PT Serif', serif;
@@ -31,7 +36,7 @@ input {
     border-radius: 15px;
     width: 300px;
     background-color: white;
-    color: maroon;
+    color: black;
     border: black solid 1px;
     height: 50px;
     transition: height 1s;
@@ -44,7 +49,7 @@ input {
     height: 40px;
     font-size: 16px;
     transition: all .4s ease-in-out;
-    background-color: aquamarine;
+    background-color: var(--aquamarine);
 }
 
 #exercise-form-button {
@@ -55,7 +60,7 @@ input {
 #exercise-form-button:hover {
     font-size: 19px;
     transition: all .4s ease-in-out;
-    background-color: aquamarine;
+    background-color: var(--aquamarine);
 }
 
 #bmi-input {
@@ -75,7 +80,7 @@ input {
     height: 40px;
     font-size: 16px;
     transition: all .4s ease-in-out;
-    background-color: aquamarine;
+    background-color: var(--aquamarine);
 }
 
 #bmi-button {
@@ -86,7 +91,7 @@ input {
 #bmi-button:hover {
     font-size: 19px;
     transition: all .4s ease-in-out;
-    background-color: aquamarine;
+    background-color: var(--aquamarine);
 }
 
 ::selection {
@@ -106,7 +111,7 @@ input {
 }
 
 #sidebar a:hover {
-    background-color: aqua;
+    background-color: var(--aqua);
     color: black;
     padding: 1rem;
     width: 140%;
@@ -119,7 +124,18 @@ input {
     text-align: center;
 }
 
-/*-----------------------------------------------------------*/
+
+#home-screen-text {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#pointer {
+    font-size: 200px;
+    float: left;
+}
+
+
 
 hr {
     margin-top: 3rem;
@@ -130,4 +146,3 @@ hr {
     width: 75%;
     max-height: 100%;
 }
-/*-----------------------------------------------------------*/
