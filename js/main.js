@@ -7,7 +7,8 @@ const bmiOptions = {
     }
 };
 
-//API Fetch Links
+//User Variables
+
 
 //Page Elements
 var exerciseData = $("#exercise-data-form");
@@ -18,6 +19,8 @@ var bmiLink = $("#bmi-link");
 var scheduleLink = $("#schedule-link");
 var homeScreenText = $("#home-screen-text");
 var handEmoji = $("#pointer");
+var bmiSubmit = $("#bmi-button");
+var bmiTotalElement = $('#bmi-total');
 
 // onload
 $(function () {
@@ -49,18 +52,58 @@ scheduleLink.on("click", function () {
     homeScreenText.css('display', 'none');
     handEmoji.css('display', 'none');
 });
+
+//Event listener for BMI Submit
+bmiSubmit.on('click', function(event){
+    event.preventDefault();
+    
+    var userHeight = $('#bmi-height').val();
+    var userWeight = $('#bmi-weight').val();
+
+    userHeight = parseInt(userHeight);
+    userWeight = parseInt(userWeight);
+
+    if(ValidateData(userHeight, userWeight)){
+        GetBmiApi(userHeight, userWeight);
+    }
+    else{
+        alert('something is wrong with the data');
+    }
+
+});
+
+function ValidateData(height, weight){
+
+    console.log('height: ' + height);
+    console.log('weight: '+ weight);
+
+    if(isNaN(height) || isNaN(weight)){
+        console.log('height or weight is NaN');
+        return false;
+    }
+    else{
+        console.log('height and weight are a number');
+        return true;
+    }
+}
+
+
+
+
+
+
 // BMI API
-/*
-GetBmiApi();
-function GetBmiApi(){
-    fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=150&height=68', bmiOptions)
+
+function GetBmiApi(bmiHeight, bmiWeight){
+    fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=' + bmiWeight + '&height=' + bmiHeight, bmiOptions)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
             console.log(data);
+            bmiTotalElement.text(Math.round(data.bmi));
         })
-}*/
+}
 
 
 // Rest API ------------------------------------------
