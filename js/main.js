@@ -7,11 +7,20 @@ const bmiOptions = {
     }
 };
 
+const restAPI = {
+    method: 'GET', 
+    headers: {
+        'RestApiKey': "3451810896e949630b1c7f214bc588b06d7b437c",
+        'Rest-Host': "https://wger.de/api/v2/exercise/?format=json"
+    }
+}
+
 //User Variables
 
 
 //Page Elements
 var exerciseData = $("#exercise-data-form");
+var exerciseElement = $('.exercise-inputs')
 var bmiCalc = $("#bmi-calc");
 var workoutCalendar = $("#workout-calendar");
 var exerciseLink = $("#exercise-link");
@@ -104,6 +113,26 @@ function GetBmiApi(bmiHeight, bmiWeight){
             bmiTotalElement.text(Math.round(data.bmi));
         })
 }
+
+
+
+// Rest API
+
+function GetExercises(name, muscles) {
+    fetch("https://wger.de/api/v2/exercise/?format=json&results=" + name + "&results=" + muscles + "&appid=3451810896e949630b1c7f214bc588b06d7b437c")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+    })
+}
+
+
+
+
+
+
 
 
 // Rest API ------------------------------------------
