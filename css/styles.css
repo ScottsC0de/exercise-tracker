@@ -38,13 +38,17 @@ input {
     margin-bottom: 10px;
 }
 
+p {
+    font-size: 1.5rem;
+}
+
 .exercise-inputs {
     border-radius: 15px;
     width: 300px;
     background-color: white;
     color: black;
     border: black solid 1px;
-    height: 50px;
+    height: 40px;
     transition: height 1s;
     -webkit-transition: height 1s;
     margin-top: 20px;
@@ -52,7 +56,7 @@ input {
 }
 
 .exercise-inputs:focus {
-    height: 40px;
+    height: 60px;
     font-size: 16px;
     transition: all .4s ease-in-out;
     background-color: var(--aquamarine);
@@ -69,21 +73,21 @@ input {
     background-color: var(--aquamarine);
 }
 
-#bmi-input {
+.bmi-input {
     border-radius: 15px;
     width: 300px;
     background-color: white;
     color: black;
     border: black solid 1px;
-    height: 50px;
+    height: 40px;
     transition: height 1s;
     -webkit-transition: height 1s;
     margin-top: 20px;
     padding: 0 10px;
 }
 
-#bmi-input:focus {
-    height: 40px;
+.bmi-input:focus {
+    height: 60px;
     font-size: 16px;
     transition: all .4s ease-in-out;
     background-color: var(--aquamarine);
@@ -156,9 +160,22 @@ hr {
     margin-top: 3rem;
 }
 
-    /* Form Containers */
+/* Form Containers */
 #forum-container {
     width: 75%;
     max-height: 100%;
 }
 
+#bmi-output-container {
+    margin-top: 20px;
+    font-size: 2rem;
+    display: none;
+}
+
+#bmi-total {
+    font-size: 2rem;
+}
+
+#bmi-chart-pic {
+    margin-top: 70px;
+}
