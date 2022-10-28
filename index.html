@@ -25,27 +25,26 @@
         <p>get after it.</p>
     </header>
 
-    <hr >
+    <hr>
 
-        <div class="container-fluid pt-5">
-            <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
-                    <div
-                        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                        <h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                            <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Fitness Tracker</span>
-                        </h2>
-                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                            id="menu">
+    <div class="container-fluid pt-5">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Fitness Tracker</span>
+                    </h2>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
 
 
-                            <li>
-                                <!-- BMI Dropdown -->
-                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"
-                                        id="bmi-link">BMI</span>
-                                </a>
-                            </li>
+                        <li>
+                            <!-- BMI Dropdown -->
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"
+                                    id="bmi-link">BMI</span>
+                            </a>
+                        </li>
 
                         <!-- Exercises -->
                         <li>
@@ -64,30 +63,36 @@
 
                 </div>
             </div>
-            
+
             <div id="forum-container">
 
                 <div id="home-screen-text" class="text-center">
-                        <p>Welcome to Rest, a webpage designed to calculate BMI, track your exercises, and schedule your
-                            fitness events. Use the sidebar to navigate to your destination.</p>
-                        <div id="pointer">👈</div>
+                    <p>Welcome to Rest, a webpage designed to calculate BMI, track your exercises, and schedule your
+                        fitness events. Use the sidebar to navigate to your destination.</p>
+                    <div id="pointer">👈</div>
+                </div>
+                <form>
+                    <div id="bmi-calc" class="text-center">
+                        <label for="">
+                            <h2>BMI Calculator</h2>
+                            <p>BMI (Body Mass Index) is a calculation of your total body fat based on your height. Enter
+                                your height (in inches) and weight to find out your BMI and use the chart below to see
+                                where you stand!</p>
+                        </label><br>
+                        <input type="text" placeholder="Enter Height (in inches)" id="bmi-height" class="bmi-input"><br>
+                        <input type="text" placeholder="Enter Weight" id="bmi-weight" class="bmi-input"><br>
+                        <button type="submit" id="bmi-button">GO</button><br>
+                        <div id="bmi-output-container">Your BMI is:</div><span id='bmi-total'></span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/1060/9112/products/BMI_NEW-4f-18x24_466fcf78-ca20-438d-a9fe-fe06fbeeedad_2400x.jpg?v=1562264540"
+                            alt="a Body Mass Index chart displaying whether your BMI is healthy or not" height="600px"
+                            width="800px" id="bmi-chart-pic">
                     </div>
-                    <form>
-                        <div id="bmi-calc" class="text-center">
-                            <label for="">
-                                <h2>BMI Calculator</h2>
-                            </label><br>
-                            <input type="text" placeholder="Enter Height" id="bmi-height">
-                            <input type = "text" placeholder="Enter Weight" id = "bmi-weight"><br>
-                            <button type = "submit" id="bmi-button">GO</button>
-                            <div>Your BMI is:</div><span id = 'bmi-total'></span>
-                        </div>
-                    </form>
-                    
-
+                </form>
 
                     <div id="exercise-data-form" class="text-center">
-                        <h2>Enter Your Data Here:</h2>
+                        <h2>Exercise Database:</h2>
+                        <p>Search any exercise here to get a solid description, find out what muscles they work, and the
+                        equipment used!</p>
                         <form action="">
                             <label for="">Exercise: </label>
                             <input type="text" placeholder="Bench Press" class="exercise-inputs"><br>
@@ -95,193 +100,196 @@
                         </form>
                     </div>
 
-                    <div id="workout-calendar" id="cal-wrap">
-                        <!-- (A) PERIOD SELECTOR -->
-                        <div id="cal-date">
-                            <select id="cal-mth">
-                                <option value="0">Jan</option>
-                                <option value="1">Feb</option>
-                                <option value="2">Mar</option>
-                                <option value="3">Apr</option>
-                                <option value="4">May</option>
-                                <option value="5">Jun</option>
-                                <option value="6">Jul</option>
-                                <option value="7">Aug</option>
-                                <option value="8">Sep</option>
-                                <option value="9">Oct</option>
-                                <option value="10">Nov</option>
-                                <option value="11">Dec</option>
-                            </select>
-                            <select id="cal-yr">
-                                <option value="2012">2012</option>
-                                <option value="2013">2013</option>
-                                <option value="2014">2014</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                                <option value="2031">2031</option>
-                                <option value="2032">2032</option>
-                            </select>
-                        </div>
-
-                        <!-- (B) CALENDAR -->
-                        <div id="cal-container">
-                            <table id="calendar">
-                                <tr class="head">
-                                    <td>Sun</td>
-                                    <td>Mon</td>
-                                    <td>Tue</td>
-                                    <td>Wed</td>
-                                    <td>Thur</td>
-                                    <td>Fri</td>
-                                    <td>Sat</td>
-                                </tr>
-                                <tr class="day">
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td>
-                                        <div class="dd">1</div>
-                                    </td>
-                                </tr>
-                                <tr class="day">
-                                    <td>
-                                        <div class="dd">2</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">3</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">4</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">5</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">6</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">7</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">8</div>
-                                    </td>
-                                </tr>
-                                <tr class="day">
-                                    <td>
-                                        <div class="dd">9</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">10</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">11</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">12</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">13</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">14</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">15</div>
-                                    </td>
-                                </tr>
-                                <tr class="day">
-                                    <td>
-                                        <div class="dd">16</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">17</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">18</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">19</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">20</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">21</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">22</div>
-                                    </td>
-                                </tr>
-                                <tr class="day">
-                                    <td>
-                                        <div class="dd">23</div>
-                                    </td>
-                                    <td class="today">
-                                        <div class="dd">24</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">25</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">26</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">27</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">28</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">29</div>
-                                    </td>
-                                </tr>
-                                <tr class="day">
-                                    <td>
-                                        <div class="dd">30</div>
-                                    </td>
-                                    <td>
-                                        <div class="dd">31</div>
-                                    </td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                    <td class="blank"></td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- (C) EVENT FORM -->
-                        <form id="cal-event" class="ninja">
-                            <h1 id="evt-head"></h1>
-                            <div id="evt-date"></div>
-                            <textarea id="evt-details" required=""></textarea>
-                            <input id="evt-close" type="button" value="Close">
-                            <input id="evt-del" type="button" value="Delete">
-                            <input id="evt-save" type="submit" value="Save">
-                        </form>
+                <div id="workout-calendar" id="cal-wrap">
+                    <p>Tracking exercise is important. Schedule your next workout, track your current numbers, or enter
+                        whatever you'd like in our calendar here. All events will be saved to local storage and
+                        displayed on the page until you delete them.</p>
+                    <!-- (A) PERIOD SELECTOR -->
+                    <div id="cal-date">
+                        <select id="cal-mth">
+                            <option value="0">Jan</option>
+                            <option value="1">Feb</option>
+                            <option value="2">Mar</option>
+                            <option value="3">Apr</option>
+                            <option value="4">May</option>
+                            <option value="5">Jun</option>
+                            <option value="6">Jul</option>
+                            <option value="7">Aug</option>
+                            <option value="8">Sep</option>
+                            <option value="9">Oct</option>
+                            <option value="10">Nov</option>
+                            <option value="11">Dec</option>
+                        </select>
+                        <select id="cal-yr">
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2031">2031</option>
+                            <option value="2032">2032</option>
+                        </select>
                     </div>
 
+                    <!-- (B) CALENDAR -->
+                    <div id="cal-container">
+                        <table id="calendar">
+                            <tr class="head">
+                                <td>Sun</td>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>Thur</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                            </tr>
+                            <tr class="day">
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td>
+                                    <div class="dd">1</div>
+                                </td>
+                            </tr>
+                            <tr class="day">
+                                <td>
+                                    <div class="dd">2</div>
+                                </td>
+                                <td>
+                                    <div class="dd">3</div>
+                                </td>
+                                <td>
+                                    <div class="dd">4</div>
+                                </td>
+                                <td>
+                                    <div class="dd">5</div>
+                                </td>
+                                <td>
+                                    <div class="dd">6</div>
+                                </td>
+                                <td>
+                                    <div class="dd">7</div>
+                                </td>
+                                <td>
+                                    <div class="dd">8</div>
+                                </td>
+                            </tr>
+                            <tr class="day">
+                                <td>
+                                    <div class="dd">9</div>
+                                </td>
+                                <td>
+                                    <div class="dd">10</div>
+                                </td>
+                                <td>
+                                    <div class="dd">11</div>
+                                </td>
+                                <td>
+                                    <div class="dd">12</div>
+                                </td>
+                                <td>
+                                    <div class="dd">13</div>
+                                </td>
+                                <td>
+                                    <div class="dd">14</div>
+                                </td>
+                                <td>
+                                    <div class="dd">15</div>
+                                </td>
+                            </tr>
+                            <tr class="day">
+                                <td>
+                                    <div class="dd">16</div>
+                                </td>
+                                <td>
+                                    <div class="dd">17</div>
+                                </td>
+                                <td>
+                                    <div class="dd">18</div>
+                                </td>
+                                <td>
+                                    <div class="dd">19</div>
+                                </td>
+                                <td>
+                                    <div class="dd">20</div>
+                                </td>
+                                <td>
+                                    <div class="dd">21</div>
+                                </td>
+                                <td>
+                                    <div class="dd">22</div>
+                                </td>
+                            </tr>
+                            <tr class="day">
+                                <td>
+                                    <div class="dd">23</div>
+                                </td>
+                                <td class="today">
+                                    <div class="dd">24</div>
+                                </td>
+                                <td>
+                                    <div class="dd">25</div>
+                                </td>
+                                <td>
+                                    <div class="dd">26</div>
+                                </td>
+                                <td>
+                                    <div class="dd">27</div>
+                                </td>
+                                <td>
+                                    <div class="dd">28</div>
+                                </td>
+                                <td>
+                                    <div class="dd">29</div>
+                                </td>
+                            </tr>
+                            <tr class="day">
+                                <td>
+                                    <div class="dd">30</div>
+                                </td>
+                                <td>
+                                    <div class="dd">31</div>
+                                </td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                                <td class="blank"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- (C) EVENT FORM -->
+                    <form id="cal-event" class="ninja">
+                        <h1 id="evt-head"></h1>
+                        <div id="evt-date"></div>
+                        <textarea id="evt-details" required=""></textarea>
+                        <input id="evt-close" type="button" value="Close">
+                        <input id="evt-del" type="button" value="Delete">
+                        <input id="evt-save" type="submit" value="Save">
+                    </form>
                 </div>
+
             </div>
         </div>
+    </div>
 
     </main>
 

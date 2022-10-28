@@ -30,6 +30,7 @@ var homeScreenText = $("#home-screen-text");
 var handEmoji = $("#pointer");
 var bmiSubmit = $("#bmi-button");
 var bmiTotalElement = $('#bmi-total');
+var bmiContainer = $('#bmi-output-container');
 
 // onload
 $(function () {
@@ -63,34 +64,36 @@ scheduleLink.on("click", function () {
 });
 
 //Event listener for BMI Submit
-bmiSubmit.on('click', function(event){
+bmiSubmit.on('click', function (event) {
     event.preventDefault();
-    
+
     var userHeight = $('#bmi-height').val();
     var userWeight = $('#bmi-weight').val();
 
     userHeight = parseInt(userHeight);
     userWeight = parseInt(userWeight);
 
-    if(ValidateData(userHeight, userWeight)){
+    if (ValidateData(userHeight, userWeight)) {
         GetBmiApi(userHeight, userWeight);
     }
-    else{
+    else {
         alert('something is wrong with the data');
     }
 
+    bmiContainer.css('display', 'block');
+
 });
 
-function ValidateData(height, weight){
+function ValidateData(height, weight) {
 
     console.log('height: ' + height);
-    console.log('weight: '+ weight);
+    console.log('weight: ' + weight);
 
-    if(isNaN(height) || isNaN(weight)){
+    if (isNaN(height) || isNaN(weight)) {
         console.log('height or weight is NaN');
         return false;
     }
-    else{
+    else {
         console.log('height and weight are a number');
         return true;
     }
@@ -103,12 +106,12 @@ function ValidateData(height, weight){
 
 // BMI API
 
-function GetBmiApi(bmiHeight, bmiWeight){
+function GetBmiApi(bmiHeight, bmiWeight) {
     fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=' + bmiWeight + '&height=' + bmiHeight, bmiOptions)
-        .then(function(response){
+        .then(function (response) {
             return response.json();
         })
-        .then(function(data){
+        .then(function (data) {
             console.log(data);
             bmiTotalElement.text(Math.round(data.bmi));
         })
