@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/calendar.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,29 +33,28 @@
                     <h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Fitness Tracker</span>
                     </h2>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start justify-content-between"
                         id="menu">
-
 
                         <li>
                             <!-- BMI Dropdown -->
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"
-                                    id="bmi-link">BMI</span>
+                                    id="bmi-link">BMI<br>Calculator</span>
                             </a>
                         </li>
 
-                        <!-- Exercises -->
+                        <!-- Exercise Database -->
                         <li>
                             <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
                                 <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline"
-                                    id="exercise-link">Exercises</span></a>
+                                    id="exercise-link">Exercise<br>Database</span></a>
                         </li>
-                        <!-- Schedule -->
+                        <!-- Workout Scheduler -->
                         <li>
                             <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline"
-                                    id="schedule-link">Schedule</span> </a>
+                                    id="schedule-link">Workout<br>Scheduler</span> </a>
                         </li>
                     </ul>
                     <hr>
@@ -67,14 +65,16 @@
             <div id="forum-container">
 
                 <div id="home-screen-text" class="text-center">
-                    <p>Welcome to Rest, a webpage designed to calculate BMI, track your exercises, and schedule your
+                    <p>Welcome to Rest, a webpage designed to calculate BMI, look up exercises, and schedule your
                         fitness events. Use the sidebar to navigate to your destination.</p>
                     <div id="pointer">👈</div>
                 </div>
+
+                <!-- Uses API #1 -->
                 <form>
                     <div id="bmi-calc" class="text-center">
                         <label for="">
-                            <h2>BMI Calculator</h2>
+                            <h2><u>BMI Calculator</u></h2>
                             <p>BMI (Body Mass Index) is a calculation of your total body fat based on your height. Enter
                                 your height (in inches) and weight to find out your BMI and use the chart below to see
                                 where you stand!</p>
@@ -89,21 +89,24 @@
                     </div>
                 </form>
 
-                    <div id="exercise-data-form" class="text-center">
-                        <h2>Exercise Database:</h2>
-                        <p>Search any exercise here to get a solid description, find out what muscles they work, and the
+                <!-- Uses API #2 -->
+                <div id="exercise-data-form" class="text-center">
+                    <h2><u>Exercise Database</u></h2>
+                    <p>Search any exercise here to get a solid description, find out what muscles they work, and the
                         equipment used!</p>
-                        <form action="">
-                            <label for="">Exercise: </label>
-                            <input type="text" placeholder="Bench Press" class="exercise-inputs"><br>
-                            <button id="exercise-form-button">Enter</button>
-                        </form>
-                    </div>
+                    <form action="">
+                        <label for="">Exercise: </label>
+                        <input type="text" placeholder="Bench Press" class="exercise-inputs"><br>
+                        <button id="exercise-form-button">Enter</button>
+                    </form>
+                </div>
 
-                <div id="workout-calendar" id="cal-wrap">
+                <!-- Uses Local Storage -->
+                <div id="workout-calendar" id="cal-wrap" class="text-center">
+                    <h2><u>Workout Scheduler</u></h2>
                     <p>Tracking exercise is important. Schedule your next workout, track your current numbers, or enter
                         whatever you'd like in our calendar here. All events will be saved to local storage and
-                        displayed on the page until you delete them.</p>
+                        displayed on the page until you delete them.</p><br>
                     <!-- (A) PERIOD SELECTOR -->
                     <div id="cal-date">
                         <select id="cal-mth">
@@ -292,9 +295,6 @@
     </div>
 
     </main>
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"

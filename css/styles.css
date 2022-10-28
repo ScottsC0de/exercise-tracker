@@ -1,10 +1,19 @@
+/* setting css color variables */
 :root {
     --aqua: aqua;
     --aquamarine: aquamarine;
 }
 
+/* colors when text is highlighted with cursor */
+::selection {
+    background-color: white;
+    color: black;
+}
+
+/* targetting the entire document */
 * {
     box-sizing: border-box;
+    /* Google Font */
     font-family: 'PT Serif', serif;
 }
 
@@ -28,88 +37,29 @@ h1 {
     font-size: 100px;
 }
 
-
-.sidebar {
-    width: 25%;
+p {
+    font-size: 1.5rem;
 }
-
 
 input {
     margin-bottom: 10px;
 }
 
-p {
-    font-size: 1.5rem;
+hr {
+    margin-top: 3rem;
 }
 
-.exercise-inputs {
-    border-radius: 15px;
-    width: 300px;
-    background-color: white;
-    color: black;
-    border: black solid 1px;
-    height: 40px;
-    transition: height 1s;
-    -webkit-transition: height 1s;
+#home-screen-text {
     margin-top: 20px;
-    padding: 0 10px;
+    font-size: 30px;
 }
 
-.exercise-inputs:focus {
-    height: 60px;
-    font-size: 16px;
-    transition: all .4s ease-in-out;
-    background-color: var(--aquamarine);
+/* pointer finger emoji */
+#pointer {
+    font-size: 200px;
+    float: left;
 }
 
-#exercise-form-button {
-    width: 100px;
-    margin-top: 20px;
-}
-
-#exercise-form-button:hover {
-    font-size: 19px;
-    transition: all .4s ease-in-out;
-    background-color: var(--aquamarine);
-}
-
-.bmi-input {
-    border-radius: 15px;
-    width: 300px;
-    background-color: white;
-    color: black;
-    border: black solid 1px;
-    height: 40px;
-    transition: height 1s;
-    -webkit-transition: height 1s;
-    margin-top: 20px;
-    padding: 0 10px;
-}
-
-.bmi-input:focus {
-    height: 60px;
-    font-size: 16px;
-    transition: all .4s ease-in-out;
-    background-color: var(--aquamarine);
-}
-
-#bmi-button {
-    width: 100px;
-    margin-top: 20px;
-}
-
-#bmi-button:hover {
-    font-size: 19px;
-    transition: all .4s ease-in-out;
-    background-color: var(--aquamarine);
-}
-
-::selection {
-    background-color: white;
-    color: black;
-}
-
-/* Added Sidebar styling 10/25/2022 */
 #sidebar li {
     font-size: 1.5rem;
     margin-top: 2rem;
@@ -117,9 +67,10 @@ p {
 
 #sidebar a {
     color: white;
-    text-align: center;
+    align-items: center;
 }
 
+/* adds animation when user hovers over sidebar links */
 #sidebar a:hover {
     background-color: var(--aqua);
     color: black;
@@ -134,36 +85,47 @@ p {
     text-align: center;
 }
 
-/*-----------------------------------------------------------*/
-
-footer {
-    text-align: center;
-    padding: 3rem;
-    width: 100%;
-}
-
-
-
-#home-screen-text {
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-#pointer {
-    font-size: 200px;
-    float: left;
-}
-
-
-
-hr {
-    margin-top: 3rem;
-}
-
-/* Form Containers */
 #forum-container {
     width: 75%;
     max-height: 100%;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+/* BMI Calculator Section */
+.bmi-input {
+    border-radius: 15px;
+    width: 300px;
+    background-color: white;
+    color: black;
+    border: black solid 1px;
+    height: 40px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* adds animation when user clicks input field */
+.bmi-input:focus {
+    height: 60px;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+    background-color: var(--aquamarine);
+}
+
+#bmi-button {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* adds animation when user hovers over button */
+#bmi-button:hover {
+    font-size: 19px;
+    transition: all .4s ease-in-out;
+    background-color: var(--aquamarine);
 }
 
 #bmi-output-container {
@@ -178,4 +140,44 @@ hr {
 
 #bmi-chart-pic {
     margin-top: 70px;
+}
+
+/* Exercise Database Section */
+.exercise-inputs {
+    border-radius: 15px;
+    width: 300px;
+    background-color: white;
+    color: black;
+    border: black solid 1px;
+    height: 40px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* adds animation when user clicks input field */
+.exercise-inputs:focus {
+    height: 60px;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+    background-color: var(--aquamarine);
+}
+
+#exercise-form-button {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* adds animation when user hovers over button */
+#exercise-form-button:hover {
+    font-size: 19px;
+    transition: all .4s ease-in-out;
+    background-color: var(--aquamarine);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    width: 100%;
 }
