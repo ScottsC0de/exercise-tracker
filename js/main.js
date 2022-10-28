@@ -121,14 +121,17 @@ function GetBmiApi(bmiHeight, bmiWeight) {
 
 // Rest API
 
-function GetExercises(name, muscles) {
-    fetch("https://wger.de/api/v2/exercise/?format=json&results=" + name + "&results=" + muscles + "&appid=3451810896e949630b1c7f214bc588b06d7b437c")
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-    })
+function GetExercises() {
+    fetch(
+        "https://wger.de/api/v2/exercise/?format=json&appid=3451810896e949630b1c7f214bc588b06d7b437c&language=2"
+        ).then(function (response) {
+            return response.json()})
+        .then(function(results) {
+            console.log(results);
+            
+        })
+    
+    
 }
 
 
