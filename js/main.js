@@ -6,13 +6,13 @@ const bmiOptions = {
         'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
     }
 };
-const restAPI = {
-    method: 'GET', 
-    headers: {
-        'RestApiKey': "3451810896e949630b1c7f214bc588b06d7b437c",
-        'Rest-Host': "https://wger.de/api/v2/exercise/?format=json"
-    }
-}
+const muscleOptions = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9f55da74bcmshb7d12ef53f0f861p1f085ajsn57c0c7ea6fae',
+		'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+	}
+};
 
 
 //Page Elements
@@ -28,9 +28,6 @@ var handEmoji = $("#pointer");
 var bmiSubmit = $("#bmi-button");
 var bmiTotalElement = $('#bmi-total');
 var bmiContainer = $('#bmi-output-container');
-
-var exerciseSubmitElement = $('#exercise-form-button');
-var exerciseDescriptionHolder = $('#exercise-description');
 
 // onload
 $(function () {
@@ -84,16 +81,8 @@ bmiSubmit.on('click', function (event) {
 
 });
 
-//exercise lookup event listener
-exerciseSubmitElement.on('click', function (event){
-    //TODO: Clear HTML of descr. holder
-    event.preventDefault();
+//muscle/exercise lookup event listener
 
-     var userExercise = $('#exercise-text').val();
-     console.log(userExercise);
-
-     GetExercises(userExercise);
-})
 
 
 function ValidateData(height, weight) {
@@ -123,39 +112,6 @@ function GetBmiApi(bmiHeight, bmiWeight) {
         })
 }
 
-// Rest API
-function GetExercises() {
-    fetch("https://wger.de/api/v2/exercise/?format=json&appid=3451810896e949630b1c7f214bc588b06d7b437c&language=2")
-        .then(function (response) {
-            return response.json()})
-        .then(function(response) {
-            console.log(response.results);
-            // for(var i = 0; i < response.results.length; i ++){
-            //     console.log(response.results[i].description);
-
-            //     var exerciseDescrElement = $('<li>');
-            //     var exerciseDesciption = response.results[i].description;
-
-            //     exerciseDesciption = exerciseDesciption.replace( /(<([^>]+)>)/ig, '');
-
-            //     if(exerciseDesciption ==''){
-            //         exerciseDescrElement.text("No Description Found");
-            //     }
-            //     else{
-            //         exerciseDescrElement.text(exerciseDesciption);
-            //     }
-            //     exerciseDescrElement.appendTo(exerciseDescriptionHolder);    
-
-            // }
-    });  
-
-    // fetch("https://wger.de/api/v2/equipment/?format=json&appid=3451810896e949630b1c7f214bc588b06d7b437c&language=2")
-    //     .then(function (response) {
-    //         return response.json()})
-    //     .then(function(equipmentResults) {
-    //         console.log(equipmentResults);
-    // })  
-}
 
 
 
