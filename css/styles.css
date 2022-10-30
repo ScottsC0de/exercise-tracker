@@ -184,7 +184,9 @@ footer {
 }
 
 /* Media Breakpoints */
-@media only screen and (max-width: 587px) {
+
+
+ @media only screen and (max-width: 587px) {
     body {
         width: 100vw;
     }
@@ -199,7 +201,7 @@ footer {
     }
 
     #sidebar {
-        height: 60px;
+        height: 70px;
         width: 100%;
         padding: 0;
     }
@@ -209,6 +211,7 @@ footer {
         width: 100%;
         padding: 0;
         position: relative;
+        display: inline block;
         
     }
 
@@ -218,18 +221,18 @@ footer {
     }
 
     #menu {
-        flex-direction: row;
-        justify-content: space-evenly;
         position: relative;
-        font-size: 10px;
+        display: block;
+        justify-content: center;
+        flex-direction: row;
     }
 
     li {
-        flex-direction: row;
+        display: inline-block;
     }
 
     li a {
-        flex-direction: row;
+        display: inline;;
         color: white;
-    }
-}
+        font-size: 10px;
+} 
