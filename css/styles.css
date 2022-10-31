@@ -47,6 +47,7 @@ input {
 
 hr {
     margin-top: 3rem;
+    width: auto;
 }
 
 #home-screen-text {
@@ -181,3 +182,57 @@ footer {
     padding: 3rem;
     width: 100%;
 }
+
+/* Media Breakpoints */
+
+
+ @media only screen and (max-width: 587px) {
+    body {
+        width: 100vw;
+    }
+
+    #main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #secondary-container{
+        flex-direction: column;
+    }
+
+    #sidebar {
+        height: 70px;
+        width: 100%;
+        padding: 0;
+    }
+
+    #secondary-sidebar {
+        height: 60px;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        display: inline block;
+        
+    }
+
+    #sidebar-header {
+        display: none;
+        color: hsla(0, 0%, 0%, 0);
+    }
+
+    #menu {
+        position: relative;
+        display: block;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    li a {
+        display: inline;;
+        color: white;
+        font-size: 10px;
+} 

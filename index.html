@@ -26,12 +26,12 @@
 
     <hr>
 
-    <div class="container-fluid pt-5">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+    <div class="container-fluid pt-5" id="main-container">
+        <div class="row flex-nowrap" id="secondary-container">
+            <div class="col-auto col-md-3 col-xl-2 col-sm-12 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white " id="secondary-sidebar">
                     <h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Fitness Tracker</span>
+                        <span class="fs-1 d-none d-sm-inline hidden" id="sidebar-header">Fitness Tracker</span>
                     </h2>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start justify-content-between"
                         id="menu">
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div id="forum-container">
+            <div id="forum-container" class=" col-sm-8">
 
                 <div id="home-screen-text" class="text-center">
                     <p>Welcome to Rest, a website designed to calculate BMI, look up exercises, and schedule your
@@ -94,7 +94,9 @@
                     <div id="exercise-data-form" class="text-center">
                         <label for="">
                             <h2><u>Exercise Database</u></h2>
+
                             <p>Search for a muscle, and the database will suggest workouts to train!</p>
+                            
                         </label>
                         <input type="text" placeholder="Tricep" class ="exercise-inputs" id = "muscle-input"><br>
                         <button id="exercise-form-button">Enter</button>
