@@ -184,8 +184,6 @@ footer {
 }
 
 /* Media Breakpoints */
-
-
 @media only screen and (max-width: 575px) {
     body {
         width: 100vw;
@@ -206,8 +204,6 @@ footer {
         display: flex;
         flex-direction: row;
         margin-bottom: 25px;
-    
-        
     }
 
     #secondary-sidebar {
@@ -218,8 +214,6 @@ footer {
         margin-top: 0px;
         height: inherit;
     }
-
-
 
     #sidebar-header {
         display: none;
@@ -261,6 +255,7 @@ footer {
     text-align: center;
 }
 
+/* the forum section */
 #forum-container {
     justify-content: center;
     align-self: center;
@@ -275,6 +270,13 @@ footer {
     display: none;
 }
 
-#cal-event {
+/* Calender forum */
+    #cal-event {
     margin-left: 0%;
+    }
+
+    /* Pointer Img */
+    #pointer {
+        display: none;
+    }
 }
