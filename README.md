@@ -24,6 +24,13 @@ GitHub URL: https://github.com/ScottsC0de/exercise-tracker
 
 ## Screenshots
 
+![alt text](img/site-pic1.png)
+![alt text](img/site-pic2.png)
+![alt text](img/site-pic3.png)
+![alt text](img/site-pic4.png)
+![alt text](img/site-pic5.png)
+![alt text](img/site-pic6.png)
+
 ## References
 
 ## Contact
