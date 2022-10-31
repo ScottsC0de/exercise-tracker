@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="./js/calendar.js"></script>
-    <title>REST</title>
+    <title>REST - Calculate BMI, Search Exercises, Track Your Progress</title>
 </head>
 
 <body>
@@ -26,20 +26,21 @@
 
     <hr>
 
-    <div class="container-fluid pt-5">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <div class="container-fluid pt-5" id="main-container">
+        <div class="row flex-nowrap" id="secondary-container">
+            <div class="col-auto col-md-3 col-xl-2 col-sm-12 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-sm-3 pt-2 text-white"
+                    id="secondary-sidebar">
+                    <h2 class="d-flex align-items-center pb-md-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Fitness Tracker</span>
                     </h2>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start justify-content-between"
+                    <ul class="nav nav-pills flex-column mb-0 align-items-center align-items-sm-start justify-content-between"
                         id="menu">
 
                         <li>
                             <!-- BMI Dropdown -->
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1  d-sm-inline"
                                     id="bmi-link">BMI<br>Calculator</span>
                             </a>
                         </li>
@@ -47,13 +48,13 @@
                         <!-- Exercise Database -->
                         <li>
                             <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline"
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1  d-sm-inline"
                                     id="exercise-link">Exercise<br>Database</span></a>
                         </li>
                         <!-- Workout Scheduler -->
                         <li>
                             <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline"
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1  d-sm-inline"
                                     id="schedule-link">Workout<br>Scheduler</span> </a>
                         </li>
                     </ul>
@@ -62,11 +63,13 @@
                 </div>
             </div>
 
-            <div id="forum-container">
+            <div id="forum-container" class=" col-sm-8">
 
                 <div id="home-screen-text" class="text-center">
+                
                     <p>Welcome to Rest, a website designed to calculate BMI, look up exercises, and schedule your
-                        fitness events. Use the sidebar to navigate to your destination.</p>
+                        fitness events. Use the navbar to navigate to your destination.</p>
+                        
                     <div id="pointer">👈</div>
                 </div>
 
@@ -94,22 +97,13 @@
                     <div id="exercise-data-form" class="text-center">
                         <label for="">
                             <h2><u>Exercise Database</u></h2>
+
                             <p>Search for a muscle, and the database will suggest workouts to train!</p>
-                        </label>
-                        <input type="text" placeholder="Tricep" class ="exercise-inputs" id = "muscle-input"><br>
+
+                        </label><br>
+                        <input type="text" placeholder="Bench Press" class="exercise-inputs"><br>
                         <button id="exercise-form-button">Enter</button>
                 </form>
-                <div class = "row">
-                    <div class = "col-4">Exercise Name
-                        <ol id = "exercise-name-holder"></ol>
-                    </div>
-                    <div class = "col-4">Secondary Target Muscles
-                        <ol id = "secondary-muscle-holder"></ol>
-                    </div>
-                    <div class = "col-4">YouTube Link
-                        <ol id = "link-holder"></ol>
-                    </div>
-                </div>
             </div>
 
             <!-- Uses Local Storage -->
