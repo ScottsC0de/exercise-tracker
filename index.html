@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="./js/calendar.js"></script>
-    <title>REST</title>
+    <title>REST - Calculate BMI, Search Exercises, Track Your Progress</title>
 </head>
 
 <body>
@@ -29,7 +29,8 @@
     <div class="container-fluid pt-5" id="main-container">
         <div class="row flex-nowrap" id="secondary-container">
             <div class="col-auto col-md-3 col-xl-2 col-sm-12 px-sm-2 px-0 bg-dark border rounded" id="sidebar">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-sm-3 pt-2 text-white" id="secondary-sidebar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-sm-3 pt-2 text-white"
+                    id="secondary-sidebar">
                     <h2 class="d-flex align-items-center pb-md-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-1 d-none d-sm-inline" id="sidebar-header">Fitness Tracker</span>
                     </h2>
@@ -65,8 +66,10 @@
             <div id="forum-container" class=" col-sm-8">
 
                 <div id="home-screen-text" class="text-center">
+                
                     <p>Welcome to Rest, a website designed to calculate BMI, look up exercises, and schedule your
                         fitness events. Use the navbar to navigate to your destination.</p>
+                        
                     <div id="pointer">👈</div>
                 </div>
 
@@ -96,8 +99,8 @@
                             <h2><u>Exercise Database</u></h2>
 
                             <p>Search for a muscle, and the database will suggest workouts to train!</p>
-                            
-                        </label>
+
+                        </label><br>
                         <input type="text" placeholder="Bench Press" class="exercise-inputs"><br>
                         <button id="exercise-form-button">Enter</button>
                 </form>
