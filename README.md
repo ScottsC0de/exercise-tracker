@@ -37,4 +37,4 @@ GitHub URL: https://github.com/ScottsC0de/exercise-tracker
 This project was completed with a team of amazing people that include Julian Benchimol, Scott George, Cody Kirschbaum, and Alex Frankhouser. Each person played a key role while also bringing a unique idea and perspectives to the table.<br />  
 The API's used:
 -  Muscles API URL: https://rapidapi.com/mortimerbrian135/api/exerciseapi3/details
--  BMI API URL:
+-  BMI API URL: https://rapidapi.com/principalapis/api/body-mass-index-bmi-calculator
