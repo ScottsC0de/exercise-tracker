@@ -80,9 +80,6 @@ bmiSubmit.on('click', function (event) {
     if (ValidateData(userHeight, userWeight)) {
         GetBmiApi(userHeight, userWeight);
     }
-    else {
-        alert('something is wrong with the data');
-    }
 
     bmiContainer.css('display', 'block');
 
