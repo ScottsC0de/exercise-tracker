@@ -28,6 +28,13 @@ GitHub URL: https://github.com/ScottsC0de/exercise-tracker
 
 
 
+![alt text](img/site-pic1.png)
+![alt text](img/site-pic2.png)
+![alt text](img/site-pic3.png)
+![alt text](img/site-pic4.png)
+![alt text](img/site-pic5.png)
+![alt text](img/site-pic6.png)
+
 ## References
 
 This project was completed with a team of amazing people that include Julian Benchimol, Scott George, Cody Kirschbaum, and Alex Frankhouser. Each person played a key role while also bringing a unique idea and perspectives to the table.
