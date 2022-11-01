@@ -19,7 +19,7 @@ Upon clicking the link to the webpage (see "Links" below), the user will be dire
 
 ## Links
 
-Website URL:
+Website URL: https://scottsc0de.github.io/exercise-tracker/
 
 GitHub URL: https://github.com/ScottsC0de/exercise-tracker
 
