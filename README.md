@@ -17,16 +17,13 @@ This project was created to allow users to track key fitness aspects as well as 
 Upon clicking the link to the webpage (see "Links" below), the user will be directed to a website with a sidebar to the left. There are three links within the sidebar: A BMI Calculator, Exercise Database, and Workout Scheduler. Clicking the BMI Scheduler will take you to an input form where you will be instructed to add your height and weight. This will then display your calculated BMI. Use the chart below to see where your numbers stand. Next link on the sidebar, the Exercise Database, will direct you to another form input. Here, you can type in an exercise and a description, the muscles worked, and equipment used for that exercise will be displayed. Lastly, the Workout Scheduler link on the sidebar will direct you to an interactive calendar where you can set the month and add events by clicking on a date. The present day is colored in light blue. An "Add Event" form will pop up where you can add, edit, and delete events. These will be saved to your browser's Local Storage and will stay displayed on the page until you delete them. At the bottom of the page, you will see a footer where you can ask the developers any questions you may have about the app.
 
 
-## Screenshots
-
-
 ## Links
 
 Website URL:
 
 GitHub URL: https://github.com/ScottsC0de/exercise-tracker
 
-
+## Screenshots
 
 ![alt text](img/site-pic1.png)
 ![alt text](img/site-pic2.png)
